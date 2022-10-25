@@ -1,0 +1,29 @@
+<script>
+    function change_theme(){
+        document.body.style.backgroundColor = "#242424";
+        document.body.style.color = "white";
+        document.getElementById("img-loon").src="https://img.icons8.com/ios-glyphs/30/FFFFFF/moon-symbol.png"
+        l = [".nav-bar>ul>li>a", ".genre-list>ul>a>li", ".file-list>a", ".not-active", ".book-href"]
+        for(var j = 0; j < l.length; j++){
+            a = document.querySelectorAll(l[j]);
+            for(var i = 0; i < a.length; i++) {
+              a[i].style.color = 'white';
+            }
+        }
+    }
+</script>
+<div class="nav-bar">
+    <ul>
+        <li><a href="{% url 'home' %}">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li class="search-form">
+            <form action="{% url 'search' %}" method='get'>
+                <input type="text" name="s" placeholder="Search" required autocomplete="off">
+                <input type="submit" value='Найти'>
+            </form>
+        </li>
+    </ul>
+    <img src="https://img.icons8.com/ios-glyphs/30/000000/moon-symbol.png/" onclick="change_theme()" class="moon" id='img-loon'>
+</div>

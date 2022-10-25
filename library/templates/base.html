@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bc_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bookich{% endblock %}</title>
+    {% include "inc/_styles.html" %}
+</head>
+<body>
+    <div class="all-content">
+        {% include 'inc/_nav.html' %}
+        <div class="content-name">{% block header %}{% endblock %}</div>
+        <div class="page-content">
+            {% include 'inc/_leftcont.html' %}     
+            <div class="content-box">
+                {% if books %}
+                    {% for book in page_obj %}
+                        <div class="book-page">
+                            <div class="book-cover">
+                                <img src="{{ book.cover.url }}">
+                            </div>
+                            <div class="book-information">
+                                <div class="upper-inf">
+                                    <div class="book-title">{{ book.title }}</div>
+                                    {% if book.original_name != book.title or not book.original_name%}
+                                    <div class="orig-title">
+                                        <b>Оригинальное название: </b> {{ book.original_name }}  
+                                    </div>
+                                    {% endif %}                                
+                                    <div class="book-author">
+                                        <b>Автор:</b> {{ book.author }}
+                                    </div>
+                                    <div class="book-genres">
+                                        <b>Жанры:</b>
+                                    {% for genre in book.genres.all %}
+                                       {{ genre.name}}{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                    </div>
+                                    <b>Аннотация:</b>
+
+                                    <div class="annotation">
+                                        {{ book.description|truncatewords:89}}
+                                    </div><br>
+                                </div>
+                                <a class="book-href" href="{{ book.get_absolute_url }}">
+                                    Подробнее
+                                </a>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                    <div class="pagination">
+                        {% for p in page_obj.paginator.page_range %}
+                            {% if page_obj.number == p %}
+                                <a href="?{{ search_str }}page={{ p }}" class="active">{{ p }}</a>
+                            {% else %}
+                                <a href="?{{ search_str }}page={{ p }}" class="not-active">{{ p }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="empty-author">
+                        {% block empty-list %}Пусто{% endblock %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% include 'inc/_footer.html' %}
+</body>
+</html>

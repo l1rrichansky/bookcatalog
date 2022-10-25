@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Jost', sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.all-content{
+	flex: 1;
+}
+
+a{
+	text-decoration: none;
+	transition: 0.3s;
+	color: black;
+}
+
+a:visited{
+	color: black;
+}
+
+a:hover{
+	color: #5b5b5b;
+	border: ;
+}
+
+.nav-bar{
+	width: 100%;
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.2);
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-bar>ul{
+	display: inline-flex;
+}
+
+.nav-bar>ul>li{
+	margin-right: 40px;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+
+.content-box{
+	width: 850px;
+}
+
+.book-page{
+	display: flex;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	transition: 0.5s;
+	padding: 20px;
+}
+
+.book-cover{
+	height: 300px;
+	width: 190px;
+	margin-right: 20px;
+}
+
+.book-cover>img{
+	height: 300px;
+	width: 190px;
+	border-radius: 5px;
+}
+
+
+.page-content{
+	display: flex;
+	justify-content: center;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+.genre-list{
+	margin-top: 40px;
+	
+}
+
+.genre-list{
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.genre-list>ul{
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+}
+
+.genre-list>ul>a>li{
+	list-style-type: none;
+	height: 50px;
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+}
+
+.genre-list>ul>a>li:hover{
+	border: 1px solid #ddd;
+}
+
+
+.genre-title{
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	font-size: 20px;
+}
+
+.active-genre{
+	border: 1px solid #ddd;
+}
+
+.non-active-genre{
+	border: 1px solid transparent;
+}
+
+.content-name{
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	margin: 20px;
+}
+
+.empty-author{
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	display: flex;
+	text-align: center;
+	font-size: 20px;
+}
+
+.pagination {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination>a {
+	border: 1px solid #ddd; /* Gray */
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination>a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination>a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.pagination a.active {
+    background-color: #2e8c69;
+    color: white;
+}
+
+.footer{
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	box-shadow: 0px 27px 37px -19px rgba(34, 60, 80, 0.2) inset;
+	flex-shrink: 0;
+}
+
+.annotation{
+	text-align: justify;
+}
+
+.file-list{
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+}
+
+.search-form>form>input[type="text"]{
+	font-family: 'Jost', sans-serif;
+	border: none;
+	outline:none;
+ 	padding: 5px;
+ 	border-bottom: 1px solid #ddd;
+}
+
+ .search-form>form>input[type="submit"]{
+ 	font-family: 'Jost', sans-serif;
+ 	background-color: white;
+ 	border: none;
+ 	padding: 5px;
+ 	border-bottom: 1px solid #ddd;
+ 	transition: 0.5s;
+ }
+
+ .search-form>form>input[type="submit"]:hover{
+	cursor: pointer;
+	box-shadow: 0px 27px 37px -19px rgba(34, 60, 80, 0.2) inset;
+ }
+
+.moon{
+	margin-right: 60px;
+	transition: 1s;
+}
+
+.moon:hover{
+	cursor: pointer;
+	transform: rotate(45deg);
+}
+
+.book-information{
+	display: flex;
+	flex-direction: column;
+}
+
+.book-href{
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 5px;
+	transition: 0.5s;
+	text-align: center;
+	flex-shrink: 0;
+}
+
+.upper-inf{
+	flex: 1;
+}
+
+.book-href:hover{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.book-ind-page{
+	display: flex;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	transition: 0.5s;
+	padding: 20px;
+	padding-bottom: 10px;
+}
+
+.book-title{
+	font-size: 25px;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.comment-cont{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	transition: 0.5s;
+	padding: 20px;
+	padding-bottom: 10px;
+}
+
+.comment-title{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 10px solid #ddd;
+	border-bottom: 10px solid #ddd;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.comment-author{
+	font-weight: bold;
+}
+
+.comment-cont>div:not(:first-child){
+	margin-top: 10px;
+}
+
+.comment-date{
+	padding-top: 10px;	
+	border-top: 1px solid #ddd;
+	text-align: right;
+}
+
+.leave-comment{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 10px solid #ddd;
+	border-bottom: 10px solid #ddd;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+.comment-form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 10px;
+}
+
+.em-com{
+	margin-top: 10px;
+}
+
+.textarea-com{
+	margin-top: 10px;
+	font-family: 'Jost', sans-serif;
+	outline:none;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.comment-form>input{
+	height: 30px;
+	font-family: 'Jost', sans-serif;
+	outline:none;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.sub-com{
+	height: 30px;
+	margin-top: 10px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.sub-com:hover{
+	box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);
+}
+
+.file-list>a {
+	position: relative; /*задаём цвет ссылки*/
+	cursor: pointer;
+	line-height: 1; /*задаём высоту строки*/
+	text-decoration: none; /*убираем подчёркивание*/
+
+}
+.file-list>a:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: black; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.file-list>a:hover:after,
+.file-list>a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}

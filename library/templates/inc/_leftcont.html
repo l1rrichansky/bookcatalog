@@ -1,0 +1,33 @@
+{% load bc_tags %}
+<div class="left-containers">
+<div class="genre-list">
+    <div class="genre-title">Жанры:</div>
+    <ul>
+        {% get_genres as genres %}
+        {% for genre_item in genres %}
+        <a href="{{ genre_item.get_absolute_url }}">
+            {% if genre_item == genre %}
+                <li class="active-genre">{{genre_item.name}}</li>
+            {% else %}
+                <li class="non-active-genre">{{genre_item.name}}</li>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </ul> 
+</div>
+<div class="genre-list">
+    <div class="genre-title">Авторы:</div>
+    <ul>
+        {% get_authors as authors %}
+        {% for author_item in authors %}
+            <a href="{{ author_item.get_absolute_url }}">
+                {% if author_item == author %}
+                <li class="active-genre">{{author_item.name}}</li>
+            {% else %}
+                <li class="non-active-genre">{{author_item.name}}</li>
+            {% endif %}
+            </a>
+        {% endfor %}
+    </ul>
+</div>
+</div> 
