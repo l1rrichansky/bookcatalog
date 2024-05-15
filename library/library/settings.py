@@ -83,11 +83,6 @@ WSGI_APPLICATION = 'library.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bookcatalog',
-        'USER': 'root',
-        'PASSWORD': 'serafim17-Varvar',
-        'HOST': 'localhost',
     }
 }
 
